@@ -1,11 +1,13 @@
 package adi.projects.adipetclinic.services.map;
 
 import adi.projects.adipetclinic.model.Pet;
-import adi.projects.adipetclinic.services.CrudService;
+import adi.projects.adipetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
